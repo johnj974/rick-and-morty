@@ -4,3 +4,17 @@ body {
   box-sizing: border-box;
   font-family: "Source Code Pro", monospace;
 }
+
+#home {
+  /* background-color: hsl(0, 100%, 50%); */
+  background-color: hsl(190, 90%, 50%);
+}
+#characters {
+  background-color: hsl(330, 67%, 52%);
+}
+#locations {
+  background-color: hsl(162, 73%, 46%);
+}
+#episodes {
+  background-color: hsl(25, 75%, 47%);
+}

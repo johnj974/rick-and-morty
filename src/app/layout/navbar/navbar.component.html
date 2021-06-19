@@ -1,13 +1,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3" *ngFor="let nav of navbarArray; let id = index">
-      <a routerLink="{{ nav | lowercase }}"
+      <a (click)="navLink(nav)"
         ><div id="{{ nav | lowercase }}" class="py-3">
-          <h3>{{ nav }} {{ id }}</h3>
+          <h3>{{ nav }}</h3>
         </div></a
       >
     </div>
   </div>
 </div>
-
-<!-- {{ nav | lowercase | link }} -->

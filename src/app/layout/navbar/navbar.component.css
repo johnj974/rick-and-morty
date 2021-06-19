@@ -1,27 +1,13 @@
-#home {
-  /* background-color: hsl(0, 100%, 50%); */
-  background-color: hsl(190, 90%, 50%);
-}
-#characters {
-  background-color: hsl(330, 67%, 52%);
-}
-#locations {
-  background-color: hsl(162, 73%, 46%);
-}
-#episodes {
-  background-color: hsl(25, 75%, 47%);
-}
-
 .col-md-3 {
   padding: 0;
 }
 
 a {
   text-decoration: none;
-  color: white;
-  /* color: #0dcaf0; */
+  cursor: pointer;
 }
 
 h3 {
   text-align: center;
+  color: hsl(0, 0%, 100%);
 }
