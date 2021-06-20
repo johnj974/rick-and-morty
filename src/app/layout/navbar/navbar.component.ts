@@ -16,7 +16,6 @@ export class NavbarComponent implements OnInit {
 
   navLink(info: string) {
     const lowerNav = info.toLowerCase();
-    console.log(lowerNav);
     if (lowerNav === 'home') {
       this.router.navigate(['/']);
     } else {

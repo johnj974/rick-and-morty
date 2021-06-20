@@ -3,6 +3,7 @@
 body {
   box-sizing: border-box;
   font-family: "Source Code Pro", monospace;
+  color: hsl(0, 0%, 100%);
 }
 
 #home {
