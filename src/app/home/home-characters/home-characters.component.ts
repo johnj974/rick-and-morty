@@ -10,15 +10,20 @@ import { CharacterService } from 'src/app/shared/services/character.service';
 })
 export class HomeCharactersComponent implements OnInit {
   //.
-  character;
+  character = {
+    name: 'Morty Smith',
+    status: 'Alive',
+    species: 'Human',
+    gender: 'Male',
+    location: { name: 'Earth' },
+    image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+  };
 
   constructor(private characterService: CharacterService) {}
 
   ngOnInit(): void {
-    this.characterService
-      .getRandomCharacter()
-      .subscribe((data: CharacterInterface) => {
-        this.character = data;
-      });
+    this.characterService.getRandomCharacter().subscribe((data: any) => {
+      this.character = data;
+    });
   }
 }

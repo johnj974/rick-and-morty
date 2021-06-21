@@ -12,9 +12,13 @@ import { LocationService } from 'src/app/shared/services/location.service';
 export class HomeLocationsComponent implements OnInit {
   //.
   location: LocationInterface;
+  residents;
   residentsArray: string[] = [];
   searchArray = [];
-  retrievedResidents = [];
+  retrievedResidents;
+  singleResident;
+  positiveResidents = true;
+
   constructor(
     private locationService: LocationService,
     private characterService: CharacterService
@@ -27,7 +31,12 @@ export class HomeLocationsComponent implements OnInit {
         this.location = data;
         console.log(this.location);
         this.residentsArray = data.residents;
-        this.reduceString(this.residentsArray);
+        if (this.location.residents.length === 0) {
+          this.retrievedResidents = [{ name: 'No Residents At This Location' }];
+          this.positiveResidents = false;
+        } else {
+          this.reduceString(this.residentsArray);
+        }
       });
   }
 
@@ -42,6 +51,7 @@ export class HomeLocationsComponent implements OnInit {
       .getMultipleCharacters(this.searchArray)
       .subscribe((data: any) => {
         this.retrievedResidents = data;
+        console.log(this.retrievedResidents);
       });
   }
 }
