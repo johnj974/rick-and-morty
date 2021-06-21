@@ -1,8 +1,22 @@
 <section>
   <div class="container" id="locations">
-    <div class="row">
-      <div class="col">
-        <p>locations</p>
+    <div class="row py-4">
+      <div class="col-md-4">
+        <div class="image-box">
+          <img src="" alt="" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="character-box">
+          <p>Name</p>
+          <h2>{{ location.name }}</h2>
+          <p>Type</p>
+          <h3>{{ location.type }}</h3>
+          <p>Dimension</p>
+          <h3>{{ location.dimension }}</h3>
+          <p>Residents</p>
+          <h3 *ngFor="let resident of residentsArray">{{ resident }}</h3>
+        </div>
       </div>
     </div>
   </div>

@@ -19,7 +19,6 @@ export class HomeCharactersComponent implements OnInit {
       .getRandomCharacter()
       .subscribe((data: CharacterInterface) => {
         this.character = data;
-        console.log(this.character.name);
       });
   }
 }

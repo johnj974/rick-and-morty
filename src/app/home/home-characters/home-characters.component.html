@@ -1,19 +1,23 @@
 <section class="py-5">
   <div class="container" id="characters">
-    <div class="row">
-      <div class="col-lg-4">
+    <div class="row py-4">
+      <div class="col-md-4">
         <div class="image-box">
-          <img src="{{ character.image }}" alt="" class="img-fluid" />
+          <img
+            src="{{ character.image }}"
+            alt="{{ character.name }}"
+            class="img-fluid"
+          />
         </div>
       </div>
-      <div class="col-lg-8">
+      <div class="col-md-8">
         <div class="character-box">
           <p>Name</p>
           <h2>{{ character.name }}</h2>
           <p>Status</p>
           <h3>{{ character.status }}</h3>
           <p>Species</p>
-          <h3>{{ character.species }}</h3>
+          <h3>{{ character.species }} - {{ character.gender }}</h3>
           <p>Last Known Location</p>
           <h3>{{ character.location.name }}</h3>
         </div>
