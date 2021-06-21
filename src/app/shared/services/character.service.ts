@@ -11,7 +11,7 @@ export class CharacterService {
   constructor(private http: HttpClient) {}
 
   getRandomCharacter() {
-    const id = Math.floor(Math.random() * 2) + 1;
+    const id = Math.floor(Math.random() * 670) + 1;
     return this.http.get(`https://rickandmortyapi.com/api/character/${id}`);
   }
 }

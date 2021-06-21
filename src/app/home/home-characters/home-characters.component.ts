@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CharacterInterface } from 'src/app/shared/interfaces/character';
+import { CharacterModel } from 'src/app/shared/models/character.model';
 import { CharacterService } from 'src/app/shared/services/character.service';
 
 @Component({
@@ -8,12 +10,16 @@ import { CharacterService } from 'src/app/shared/services/character.service';
 })
 export class HomeCharactersComponent implements OnInit {
   //.
+  character;
 
   constructor(private characterService: CharacterService) {}
 
   ngOnInit(): void {
-    this.characterService.getRandomCharacter().subscribe((data) => {
-      console.log(data);
-    });
+    this.characterService
+      .getRandomCharacter()
+      .subscribe((data: CharacterInterface) => {
+        this.character = data;
+        console.log(this.character.name);
+      });
   }
 }

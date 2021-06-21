@@ -2,10 +2,21 @@
   <div class="container" id="characters">
     <div class="row">
       <div class="col-lg-4">
-        <img src="" alt="" />
+        <div class="image-box">
+          <img src="{{ character.image }}" alt="" class="img-fluid" />
+        </div>
       </div>
       <div class="col-lg-8">
-        <p>characters</p>
+        <div class="character-box">
+          <p>Name</p>
+          <h2>{{ character.name }}</h2>
+          <p>Status</p>
+          <h3>{{ character.status }}</h3>
+          <p>Species</p>
+          <h3>{{ character.species }}</h3>
+          <p>Last Known Location</p>
+          <h3>{{ character.location.name }}</h3>
+        </div>
       </div>
     </div>
   </div>
