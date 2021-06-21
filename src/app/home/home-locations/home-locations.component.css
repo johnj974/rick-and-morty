@@ -15,3 +15,17 @@ p {
     border-radius: 0;
   }
 }
+
+#residents {
+  display: contents;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.image-box {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

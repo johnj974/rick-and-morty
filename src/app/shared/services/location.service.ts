@@ -10,7 +10,7 @@ export class LocationService {
   constructor(private http: HttpClient) {}
 
   getRandomLocation() {
-    const id = 44;
+    const id = 90;
     return this.http.get(`${this.url}/location/${id}`);
   }
   // getRandomLocation() {

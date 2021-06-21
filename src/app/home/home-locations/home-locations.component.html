@@ -1,23 +1,51 @@
-<section>
+<section class="pb-5">
   <div class="container" id="locations">
     <div class="row py-4">
       <div class="col-md-4">
-        <div class="image-box">
-          <img src="" alt="" class="img-fluid" />
+        <div>
+          <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h3>Residents</h3>
+              </div>
+              <div
+                class="carousel-item"
+                *ngFor="let resident of retrievedResidents"
+              >
+                <img
+                  src="{{ resident.image }}"
+                  class="img-fluid"
+                  alt="{{ resident.name }}"
+                />
+                <p>{{ resident.name }}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-md-8">
         <div class="character-box">
-          <p>Name</p>
+          <p>Location</p>
           <h2>{{ location.name }}</h2>
           <p>Type</p>
           <h3>{{ location.type }}</h3>
           <p>Dimension</p>
           <h3>{{ location.dimension }}</h3>
           <p>Residents</p>
-          <h3 *ngFor="let resident of residentsArray">{{ resident }}</h3>
+
+          <h3 *ngFor="let resident of retrievedResidents" id="residents">
+            {{ resident.name }},
+          </h3>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- <div class="image-box img-fluid">
+  <img
+    *ngFor="let resident of retrievedResidents"
+    src="{{ resident.image }}"
+    alt=""
+  />
+</div> -->
