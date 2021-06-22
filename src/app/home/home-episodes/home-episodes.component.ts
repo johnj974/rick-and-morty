@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EpisodeInterface } from 'src/app/shared/interfaces/episode';
+import { EpisodesService } from 'src/app/shared/services/episodes.service';
 
 @Component({
   selector: 'app-home-episodes',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-episodes.component.css']
 })
 export class HomeEpisodesComponent implements OnInit {
-
-  constructor() { }
+  //.
+  singleEpisode: EpisodeInterface;
+  constructor(private episodeService: EpisodesService) { }
 
   ngOnInit(): void {
+    this.episodeService.getRandomEpisode().subscribe((returnedEpisode)=>{
+      this.singleEpisode = returnedEpisode;
+    })
   }
 
 }
