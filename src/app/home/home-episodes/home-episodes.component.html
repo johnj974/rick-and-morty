@@ -1,9 +1,26 @@
-<section>
+<section class="pb-5">
   <div class="container" id="episodes">
-    <div class="row">
-      <div class="col">
-        <p>episodes</p>
-        <p>{{ singleEpisode.name }}</p>
+    <div class="row py-4">
+      <div class="col-md-4">
+        <div class="image-box">
+          <img
+            src="{{ singleCharacter.image }}"
+            alt="{{ singleCharacter.name }}"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="episode-box">
+          <p>Episode No</p>
+          <h2>{{ singleEpisode.id }}</h2>
+          <p>Name</p>
+          <h3>{{ singleEpisode.name }}</h3>
+          <p>Season - Episode</p>
+          <h3>{{ singleEpisode.episode }}</h3>
+          <p>Characters Involved</p>
+          <h3>{{ singleEpisode.characters.length }}</h3>
+        </div>
       </div>
     </div>
   </div>

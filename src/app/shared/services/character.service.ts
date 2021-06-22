@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CharacterInterface } from '../interfaces/character';
 
 @Injectable({
   providedIn: 'root',
@@ -17,5 +18,9 @@ export class CharacterService {
 
   getMultipleCharacters(array) {
     return this.http.get(`${this.url}/character/${array}`);
+  }
+
+  getSpecificCharacter(id:number){
+    return this.http.get<CharacterInterface>(`${this.url}/character/${id}`)
   }
 }

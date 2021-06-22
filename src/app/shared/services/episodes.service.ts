@@ -10,7 +10,8 @@ export class EpisodesService {
   constructor(private http: HttpClient) { }
 
   getRandomEpisode(){
-    return this.http.get<EpisodeInterface>("https://rickandmortyapi.com/api/episode/28");
+    const randomNumber = Math.floor(Math.random() * 41) + 1;
+    return this.http.get<EpisodeInterface>(`https://rickandmortyapi.com/api/episode/${randomNumber}`);
   }
 
 
