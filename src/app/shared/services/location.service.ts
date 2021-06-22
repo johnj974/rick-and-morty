@@ -9,14 +9,14 @@ export class LocationService {
   url = 'https://rickandmortyapi.com/api';
   constructor(private http: HttpClient) {}
 
-  getRandomLocation() {
-    const id = 63;
-    return this.http.get(`${this.url}/location/${id}`);
-  }
   // getRandomLocation() {
-  //   const id = Math.floor(Math.random() * 108) + 1;
+  //   const id = 44;
   //   return this.http.get(`${this.url}/location/${id}`);
   // }
+  getRandomLocation() {
+    const id = Math.floor(Math.random() * 108) + 1;
+    return this.http.get(`${this.url}/location/${id}`);
+  }
 }
 //73 for no 1 resident
 //44 for multiple residents

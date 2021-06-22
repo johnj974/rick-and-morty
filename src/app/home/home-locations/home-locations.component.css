@@ -29,3 +29,18 @@ img {
   display: flex;
   align-items: center;
 }
+
+.boxA{
+  position:relative;
+}
+
+.centered{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(162, 73%, 46%);
+  padding:0 10px;
+  border-radius: 5px;
+}
+

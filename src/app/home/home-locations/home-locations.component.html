@@ -15,14 +15,15 @@
                 class="carousel-item"
                 *ngFor="let resident of retrievedResidents"
               >
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center boxA">
                   <img
                     *ngIf="positiveResidents"
                     src="{{ resident.image }}"
                     alt="{{ resident.name }}"
                   />
+                  <div class="centered">{{ resident.name }}</div>
                 </div>
-                <p class="d-flex justify-content-center">{{ resident.name }}</p>
+                <!-- <p class="d-flex justify-content-center">{{ resident.name }}</p> -->
               </div>
             </div>
           </div>
@@ -37,21 +38,14 @@
           <p>Dimension</p>
           <h3>{{ location.dimension }}</h3>
           <p>Residents</p>
-
+          <marquee width="80%" direction="left" height="50px">
           <h3 *ngFor="let resident of retrievedResidents" id="residents">
             {{ resident.name }},
           </h3>
+        </marquee>
           <h3>{{ retrievedResidents.name }}</h3>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- <div class="image-box img-fluid">
-  <img
-    *ngFor="let resident of retrievedResidents"
-    src="{{ resident.image }}"
-    alt=""
-  />
-</div> -->
