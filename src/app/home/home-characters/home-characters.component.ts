@@ -22,7 +22,7 @@ export class HomeCharactersComponent implements OnInit {
   constructor(private characterService: CharacterService) {}
 
   ngOnInit(): void {
-    this.characterService.getRandomCharacter().subscribe((data: any) => {
+    this.characterService.getRandomCharacter().subscribe((data) => {
       this.character = data;
     });
   }

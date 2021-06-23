@@ -6,6 +6,7 @@ import { MainHomeComponent } from './main-home/main-home.component';
 import { HomeCharactersComponent } from './home-characters/home-characters.component';
 import { HomeLocationsComponent } from './home-locations/home-locations.component';
 import { HomeEpisodesComponent } from './home-episodes/home-episodes.component';
+import { HomeLocationComponent } from './home-location/home-location.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HomeEpisodesComponent } from './home-episodes/home-episodes.component';
     MainHomeComponent,
     HomeCharactersComponent,
     HomeLocationsComponent,
-    HomeEpisodesComponent
+    HomeEpisodesComponent,
+    HomeLocationComponent
   ],
   imports: [
     CommonModule,

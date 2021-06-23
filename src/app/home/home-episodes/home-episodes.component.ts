@@ -11,8 +11,19 @@ import { EpisodesService } from 'src/app/shared/services/episodes.service';
 })
 export class HomeEpisodesComponent implements OnInit {
   //.
-  singleEpisode: EpisodeInterface;
-  singleCharacter: CharacterInterface;
+  singleEpisode: EpisodeInterface = {
+    id: 30,
+    name: "The ABC's of Beth",
+    air_date: 'September 24, 2017',
+    episode: 'S03E09',
+    characters: [],
+    url: 'https://rickandmortyapi.com/api/episode/30',
+    created: '2017',
+  };
+  singleCharacter = {
+    name: 'Rick Sanchez',
+    image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+  };
   constructor(
     private episodeService: EpisodesService,
     private chracterService: CharacterService
@@ -21,6 +32,7 @@ export class HomeEpisodesComponent implements OnInit {
   ngOnInit(): void {
     this.episodeService.getRandomEpisode().subscribe((returnedEpisode) => {
       this.singleEpisode = returnedEpisode;
+      console.log(this.singleEpisode);
     });
 
     this.chracterService
