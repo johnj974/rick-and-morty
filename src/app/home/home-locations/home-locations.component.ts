@@ -18,6 +18,7 @@ export class HomeLocationsComponent implements OnInit {
   retrievedResidents;
   singleResident;
   positiveResidents = true;
+  katarina:CharacterInterface;
 
   constructor(
     private locationService: LocationService,
@@ -38,6 +39,10 @@ export class HomeLocationsComponent implements OnInit {
           this.reduceString(this.residentsArray);
         }
       });
+
+    this.characterService.getSpecificCharacter(189).subscribe((character)=>{
+      this.katarina = character;
+    })
   }
 
   reduceString(array) {

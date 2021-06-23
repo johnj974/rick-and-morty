@@ -13,14 +13,16 @@ export class CharacterService {
 
   getRandomCharacter() {
     const id = Math.floor(Math.random() * 670) + 1;
-    return this.http.get(`${this.url}/character/${id}`);
+    return this.http.get<CharacterInterface>(`${this.url}/character/${id}`);
   }
 
   getMultipleCharacters(array) {
-    return this.http.get(`${this.url}/character/${array}`);
+    return this.http.get<CharacterInterface>(`${this.url}/character/${array}`);
   }
 
-  getSpecificCharacter(id:number){
-    return this.http.get<CharacterInterface>(`${this.url}/character/${id}`)
+  getSpecificCharacter(id: number) {
+    return this.http.get<CharacterInterface>(`${this.url}/character/${id}`);
   }
 }
+
+//https://rickandmortyapi.com/api/character/?name=rick&status=alive

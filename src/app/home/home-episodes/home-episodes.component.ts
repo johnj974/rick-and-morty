@@ -7,22 +7,26 @@ import { EpisodesService } from 'src/app/shared/services/episodes.service';
 @Component({
   selector: 'app-home-episodes',
   templateUrl: './home-episodes.component.html',
-  styleUrls: ['./home-episodes.component.css']
+  styleUrls: ['./home-episodes.component.css'],
 })
 export class HomeEpisodesComponent implements OnInit {
   //.
   singleEpisode: EpisodeInterface;
   singleCharacter: CharacterInterface;
-  constructor(private episodeService: EpisodesService, private chracterService: CharacterService) { }
+  constructor(
+    private episodeService: EpisodesService,
+    private chracterService: CharacterService
+  ) {}
 
   ngOnInit(): void {
-    this.episodeService.getRandomEpisode().subscribe((returnedEpisode)=>{
+    this.episodeService.getRandomEpisode().subscribe((returnedEpisode) => {
       this.singleEpisode = returnedEpisode;
-    })
-    
-    this.chracterService.getSpecificCharacter(1).subscribe((returnedCharacter)=>{
-      this.singleCharacter = returnedCharacter;
-    })
-  }
+    });
 
+    this.chracterService
+      .getSpecificCharacter(1)
+      .subscribe((returnedCharacter) => {
+        this.singleCharacter = returnedCharacter;
+      });
+  }
 }

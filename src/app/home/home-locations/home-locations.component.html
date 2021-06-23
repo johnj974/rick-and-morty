@@ -8,7 +8,8 @@
               <div class="carousel-item active">
                 <!-- <p *ngIf="retrievedResidents">Resident Images</p> -->
                 <div class="d-flex justify-content-center">
-                  <img src="{{ retrievedResidents.image }}" alt="" />
+                  <img src="{{ katarina.image }}" alt="" />
+                  <div class="centered">residents</div>
                 </div>
               </div>
               <div
@@ -39,11 +40,11 @@
           <h3>{{ location.dimension }}</h3>
           <p>Residents</p>
           <marquee width="80%" direction="left" height="50px">
-          <h3 *ngFor="let resident of retrievedResidents" id="residents">
-            {{ resident.name }},
-          </h3>
-        </marquee>
-          <h3>{{ retrievedResidents.name }}</h3>
+            <h3 *ngFor="let resident of retrievedResidents" id="residents">
+              {{ resident.name }},
+            </h3>
+          </marquee>
+          <!-- <h3>{{ retrievedResidents.name }}</h3> -->
         </div>
       </div>
     </div>
