@@ -28,7 +28,7 @@ export class HomeLocationComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.characterService.getSpecificCharacter(189).subscribe((character) => {
+    this.characterService.getSpecificCharacter(662).subscribe((character) => {
       this.katarina = character;
     });
     this.locationService.getRandomLocation().subscribe((retrievedLocation) => {

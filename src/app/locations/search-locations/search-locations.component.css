@@ -1,0 +1,31 @@
+p {
+  margin: 0;
+}
+
+.row {
+  background-color: hsl(271, 76%, 53%);
+}
+
+.col-lg-4 {
+  padding: 0;
+}
+
+.image-box {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.container {
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    border-radius: 0;
+  }
+}
