@@ -10,12 +10,12 @@ import { LocationService } from 'src/app/shared/services/location.service';
 export class SearchLocationsComponent implements OnInit {
   //.
   locationArray: LocationInterface[] = [];
+  residentsArray = [];
   constructor(private locationService: LocationService) {}
 
   ngOnInit(): void {
     this.locationService.getLocations().subscribe((data: any) => {
       this.locationArray = data.results;
-      console.log(this.locationArray);
     });
   }
 }

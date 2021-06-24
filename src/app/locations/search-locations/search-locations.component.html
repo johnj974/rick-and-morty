@@ -1,24 +1,31 @@
 <div class="container">
-  <div class="row py-4" *ngFor="let location of locationArray">
-    <div class="col-md-6">
-      <div class="image-box">
-        <!-- <img
-          src="{{ character.image }}"
-          alt="{{ character.name }}"
-          class="img-fluid"
-        /> -->
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="character-box">
-        <p>Location</p>
-        <h2>{{ location.name }}</h2>
-        <p>Type</p>
-        <h3>{{ location.type }}</h3>
-        <p>Dimension</p>
-        <h3>{{ location.dimension }}</h3>
-        <p>Residents</p>
-        <h3>{{ location.residents.length }}</h3>
+  <div class="row py-4 mb-4">
+    <div
+      class="col-md-6"
+      *ngFor="let location of locationArray; let id = index"
+    >
+      <div class="row py-4 location-box {{ id % 3 === 1 ? 'orange' : 'pink' }}">
+        <div class="col-md-4">
+          <div class="image-box">
+            <img
+              src="https://rickandmortyapi.com/api/character/avatar/361.jpeg"
+              alt="name"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="character-box">
+            <p>Location</p>
+            <h3>{{ location.name }}</h3>
+            <p>Type</p>
+            <h4>{{ location.type }}</h4>
+            <p>Dimension</p>
+            <h4>{{ location.dimension }}</h4>
+            <p>Residents - {{ location.residents.length }}</p>
+            <h4>{{ location.residents.length }}</h4>
+          </div>
+        </div>
       </div>
     </div>
   </div>

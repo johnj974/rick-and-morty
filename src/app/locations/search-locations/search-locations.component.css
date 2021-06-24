@@ -2,8 +2,19 @@ p {
   margin: 0;
 }
 
-.row {
-  background-color: hsl(271, 76%, 53%);
+.location-box {
+  /* background-color: hsl(271, 76%, 53%); */
+  border-radius: 10px;
+  margin: 20px 10px;
+  min-height: 326px;
+}
+
+.pink {
+  background-color: hsl(330, 67%, 52%);
+}
+
+.orange {
+  background-color: hsl(25, 75%, 47%);
 }
 
 .col-lg-4 {
