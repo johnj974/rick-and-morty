@@ -3,8 +3,9 @@
     <div
       class="col-md-6"
       *ngFor="let location of locationArray; let id = index"
+      (click)="check(location)"
     >
-      <div class="row py-4 location-box {{ id % 3 === 1 ? 'orange' : 'pink' }}">
+      <div class="row py-4 location-box {{ id % 2 === 0 ? 'orange' : 'pink' }}">
         <div class="col-md-4">
           <div class="image-box">
             <img
@@ -17,13 +18,18 @@
         <div class="col-md-8">
           <div class="character-box">
             <p>Location</p>
-            <h3>{{ location.name }}</h3>
+            <h4>{{ location.name }}</h4>
             <p>Type</p>
-            <h4>{{ location.type }}</h4>
+            <h5>{{ location.type }}</h5>
             <p>Dimension</p>
-            <h4>{{ location.dimension }}</h4>
+            <h5>{{ location.dimension }}</h5>
             <p>Residents - {{ location.residents.length }}</p>
-            <h4>{{ location.residents.length }}</h4>
+
+            <marquee width="80%" direction="left" height="50px">
+              <h5 *ngFor="let resident of retrievedResidents" id="residents">
+                {{ resident.name }},
+              </h5>
+            </marquee>
           </div>
         </div>
       </div>
