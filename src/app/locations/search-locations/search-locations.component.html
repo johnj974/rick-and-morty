@@ -3,7 +3,7 @@
     <div
       class="col-md-6"
       *ngFor="let location of locationArray; let id = index"
-      (click)="check(location)"
+      (click)="selectSingleLocation(location.name, location.id)"
     >
       <div class="row py-4 location-box {{ id % 2 === 0 ? 'orange' : 'pink' }}">
         <div class="col-md-4">
@@ -23,13 +23,8 @@
             <h5>{{ location.type }}</h5>
             <p>Dimension</p>
             <h5>{{ location.dimension }}</h5>
-            <p>Residents - {{ location.residents.length }}</p>
-
-            <marquee width="80%" direction="left" height="50px">
-              <h5 *ngFor="let resident of retrievedResidents" id="residents">
-                {{ resident.name }},
-              </h5>
-            </marquee>
+            <p>Residents</p>
+            <h5>{{ location.residents.length }}</h5>
           </div>
         </div>
       </div>

@@ -19,6 +19,12 @@ export class LocationService {
     const id = Math.floor(Math.random() * 108) + 1;
     return this.http.get<LocationInterface>(`${this.url}/location/${id}`);
   }
+
+  getSingleLocation(id) {
+    return this.http.get<LocationInterface>(
+      `https://rickandmortyapi.com/api/location/${id}`
+    );
+  }
 }
 
 //--------------------------------------------------------------------------
