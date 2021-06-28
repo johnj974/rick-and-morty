@@ -13,6 +13,7 @@ export class SearchLocationsComponent implements OnInit {
   //.
 
   locationArray: LocationInterface[] = [];
+  numberArray: string[] = ['one', 'two', 'three', 'four', 'five', 'six'];
 
   constructor(
     private locationService: LocationService,
@@ -33,4 +34,17 @@ export class SearchLocationsComponent implements OnInit {
     const locationName = location.replace(/ /g, '');
     this.router.navigate([locationName, id], { relativeTo: this.route });
   }
+
+  nextPage(id: number) {
+    const pageNumber = id + 1;
+    this.locationService.getLocationPage(pageNumber).subscribe((data: any) => {
+      this.locationArray = data.results;
+    });
+  }
+
+  // GENERATES A RANDOM CHARACTER IMAGE FOR USE IN THE IMG ELEMENT
+  // randomCharacter() {
+  //   const randomImageId = Math.floor(Math.random() * 671) + 1;
+  //   return `https://rickandmortyapi.com/api/character/avatar/${randomImageId}.jpeg`;
+  // }
 }

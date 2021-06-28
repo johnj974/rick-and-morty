@@ -15,6 +15,12 @@ export class LocationService {
     return this.http.get('https://rickandmortyapi.com/api/location');
   }
 
+  getLocationPage(index: number) {
+    return this.http.get(
+      `https://rickandmortyapi.com/api/location?page=${index}`
+    );
+  }
+
   getRandomLocation() {
     const id = Math.floor(Math.random() * 108) + 1;
     return this.http.get<LocationInterface>(`${this.url}/location/${id}`);

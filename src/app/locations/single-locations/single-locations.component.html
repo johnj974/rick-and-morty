@@ -27,11 +27,8 @@
 </section>
 <section>
   <div class="container">
-    <div class="row py-4 mb-4">
-      <div
-        class="col-md-6"
-        *ngFor="let resident of retrievedResidents; let id = index"
-      >
+    <div class="row py-4">
+      <div class="col-md-6" *ngFor="let resident of retrievedResidents">
         <div class="row py-4 location-box">
           <div class="col-md-4">
             <div class="image-box">

@@ -38,7 +38,7 @@ export class SingleLocationsComponent implements OnInit {
         .getSingleLocation(params.id)
         .subscribe((retrievedLocation) => {
           this.location = retrievedLocation;
-          console.log(this.location.residents);
+          //console.log(this.location.residents);
           this.locationId = params.id;
           this.check(this.location);
         });
@@ -57,7 +57,7 @@ export class SingleLocationsComponent implements OnInit {
       let number = url.slice(lastInstance + 1);
       searchArray.push(number);
     }
-    console.log(searchArray);
+    //console.log(searchArray);
     this.characterService
       .getMultipleCharacters(searchArray)
       .subscribe((data: any) => {

@@ -1,5 +1,6 @@
 section {
   background-color: hsl(162, 73%, 46%);
+  min-height: 500px;
 }
 
 p {
@@ -61,4 +62,5 @@ img {
   background-color: hsl(271, 76%, 53%);
   border-radius: 10px;
   margin: 20px 10px;
+  min-height: 248px;
 }

@@ -1,5 +1,19 @@
 <div class="container">
-  <div class="row py-4 mb-4">
+  <div class="row pt-4">
+    <div class="col" id="pages">
+      <button
+        class="btn btn-success"
+        (click)="nextPage(id)"
+        *ngFor="let number of numberArray; let id = index"
+      >
+        page {{ number }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row py-4">
     <div
       class="col-md-6"
       *ngFor="let location of locationArray; let id = index"
@@ -12,7 +26,7 @@
               src="{{
                 location.residents.length === 0
                   ? 'https://rickandmortyapi.com/api/character/avatar/662.jpeg'
-                  : 'https://rickandmortyapi.com/api/character/avatar/300.jpeg'
+                  : 'https://rickandmortyapi.com/api/character/avatar/4.jpeg'
               }}"
               alt="name"
               class="img-fluid"
@@ -21,7 +35,7 @@
         </div>
         <div class="col-md-8">
           <div class="character-box">
-            <p>Location</p>
+            <p>Location {{ location.id }}</p>
             <h4>{{ location.name }}</h4>
             <p>Type</p>
             <h5>{{ location.type }}</h5>
@@ -37,3 +51,5 @@
 </div>
 
 <!-- https://rickandmortyapi.com/api/character/avatar/361.jpeg -->
+
+<!-- <img src="{{ randomCharacter() }}" alt="name" class="img-fluid" /> -->

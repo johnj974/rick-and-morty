@@ -45,3 +45,9 @@ img {
 #residents {
   display: contents;
 }
+
+#pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
