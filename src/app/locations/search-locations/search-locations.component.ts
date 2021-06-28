@@ -13,7 +13,6 @@ export class SearchLocationsComponent implements OnInit {
   //.
 
   locationArray: LocationInterface[] = [];
-  retrievedResidents = [];
 
   constructor(
     private locationService: LocationService,
@@ -34,23 +33,4 @@ export class SearchLocationsComponent implements OnInit {
     const locationName = location.replace(/ /g, '');
     this.router.navigate([locationName, id], { relativeTo: this.route });
   }
-
-  // check(location) {
-
-  //   const residentArray = location.residents;
-  //   const searchArray = [];
-  //   for (let address of residentArray) {
-  //     let url = address;
-  //     let lastInstance = url.lastIndexOf('/');
-  //     let number = url.slice(lastInstance + 1);
-  //     searchArray.push(number);
-  //   }
-  //   console.log(searchArray);
-  //   this.characterService
-  //     .getMultipleCharacters(searchArray)
-  //     .subscribe((data: any) => {
-  //       this.retrievedResidents = data;
-  //       console.log(this.retrievedResidents);
-  //     });
-  // }
 }

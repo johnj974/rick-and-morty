@@ -7,14 +7,15 @@ p {
   border-radius: 10px;
   margin: 20px 10px;
   min-height: 300px;
+  cursor: pointer;
 }
 
 .pink {
-  background-color: hsl(330, 67%, 52%);
+  background-color: hsl(300, 71%, 66%);
 }
 
 .orange {
-  background-color: hsl(25, 75%, 47%);
+  background-color: hsl(39, 100%, 50%);
 }
 
 .col-lg-4 {

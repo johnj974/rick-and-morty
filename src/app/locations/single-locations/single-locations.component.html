@@ -1,5 +1,5 @@
-<section class="pb-5">
-  <div class="container" id="locations">
+<section class="py-5">
+  <div class="container {{ locationId % 2 === 0 ? 'pink' : 'orange' }}">
     <div class="row py-4">
       <div class="col-md-4">
         <div class="image-box">
@@ -20,6 +20,38 @@
           <h3>{{ location.dimension }}</h3>
           <p>Residents</p>
           <h3>{{ location.residents.length }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row py-4 mb-4">
+      <div
+        class="col-md-6"
+        *ngFor="let resident of retrievedResidents; let id = index"
+      >
+        <div class="row py-4 location-box">
+          <div class="col-md-4">
+            <div class="image-box">
+              <img
+                src="{{ resident.image }}"
+                alt="{{ resident.name }}"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="character-box">
+              <p>Name</p>
+              <h4>{{ resident.name }}</h4>
+              <p>Status</p>
+              <h5>{{ resident.status }}</h5>
+              <p>Species</p>
+              <h5>{{ resident.species }} - {{ resident.gender }}</h5>
+            </div>
+          </div>
         </div>
       </div>
     </div>

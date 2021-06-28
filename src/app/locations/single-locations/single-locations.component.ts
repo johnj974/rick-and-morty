@@ -24,6 +24,8 @@ export class SingleLocationsComponent implements OnInit {
     dimension: 'unknown',
     residents: [],
   };
+
+  locationId;
   constructor(
     private locationService: LocationService,
     private characterService: CharacterService,
@@ -36,11 +38,31 @@ export class SingleLocationsComponent implements OnInit {
         .getSingleLocation(params.id)
         .subscribe((retrievedLocation) => {
           this.location = retrievedLocation;
-          console.log(this.location);
+          console.log(this.location.residents);
+          this.locationId = params.id;
+          this.check(this.location);
         });
     });
     this.characterService.getSpecificCharacter(662).subscribe((character) => {
       this.planet = character;
     });
+  }
+
+  check(location) {
+    const residentArray = this.location.residents;
+    const searchArray = [];
+    for (let address of residentArray) {
+      let url = address;
+      let lastInstance = url.lastIndexOf('/');
+      let number = url.slice(lastInstance + 1);
+      searchArray.push(number);
+    }
+    console.log(searchArray);
+    this.characterService
+      .getMultipleCharacters(searchArray)
+      .subscribe((data: any) => {
+        this.retrievedResidents = data;
+        console.log(this.retrievedResidents);
+      });
   }
 }

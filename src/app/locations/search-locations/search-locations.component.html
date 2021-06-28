@@ -9,7 +9,11 @@
         <div class="col-md-4">
           <div class="image-box">
             <img
-              src="https://rickandmortyapi.com/api/character/avatar/361.jpeg"
+              src="{{
+                location.residents.length === 0
+                  ? 'https://rickandmortyapi.com/api/character/avatar/662.jpeg'
+                  : 'https://rickandmortyapi.com/api/character/avatar/300.jpeg'
+              }}"
               alt="name"
               class="img-fluid"
             />
@@ -31,3 +35,5 @@
     </div>
   </div>
 </div>
+
+<!-- https://rickandmortyapi.com/api/character/avatar/361.jpeg -->
