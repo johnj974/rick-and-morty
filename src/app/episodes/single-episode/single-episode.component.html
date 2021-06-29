@@ -1,0 +1,21 @@
+<section class="py-5" id="episodes">
+  <div class="container">
+    <div class="row episode-box">
+      <div class="col-md-4 episode-number">
+        <h1>{{ episode.id }}</h1>
+      </div>
+      <div class="col-md-8">
+        <div class="episode-details">
+          <p>Episode No</p>
+          <h4>{{ episode.id }}</h4>
+          <p>Name</p>
+          <h5>{{ episode.name }}</h5>
+          <p>Season - Episode</p>
+          <h5>{{ episode.episode }}</h5>
+          <p>Characters Involved</p>
+          <h5>{{ episode.characters.length }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

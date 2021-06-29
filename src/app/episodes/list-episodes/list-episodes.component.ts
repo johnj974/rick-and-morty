@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EpisodeInterface } from 'src/app/shared/interfaces/episode';
 import { EpisodesService } from 'src/app/shared/services/episodes.service';
 
@@ -10,12 +11,22 @@ import { EpisodesService } from 'src/app/shared/services/episodes.service';
 export class ListEpisodesComponent implements OnInit {
   //.
   episodesArray: EpisodeInterface[] = [];
-  constructor(private episodesService: EpisodesService) {}
+  constructor(
+    private episodesService: EpisodesService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.episodesService.getAllEpisodes().subscribe((episodes: any) => {
       this.episodesArray = episodes.results;
       console.log(this.episodesArray);
     });
+  }
+
+  toEpisode(episodeName, id) {
+    const episodeId = id + 1;
+    console.log(id + 1);
+    this.router.navigate([episodeName, episodeId], { relativeTo: this.route });
   }
 }
