@@ -1,0 +1,23 @@
+.episode-box {
+  background-color: hsl(271, 76%, 53%);
+  border-radius: 10px;
+  margin: 20px 10px;
+  min-height: 300px;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+.episode-number {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 400%;
+  color: hsl(25, 75%, 47%);
+  font-weight: bolder;
+}

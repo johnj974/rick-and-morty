@@ -3,16 +3,24 @@ import { Injectable } from '@angular/core';
 import { EpisodeInterface } from '../interfaces/episode';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EpisodesService {
   //.
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getRandomEpisode(){
+  getRandomEpisode() {
     const randomNumber = Math.floor(Math.random() * 41) + 1;
-    return this.http.get<EpisodeInterface>(`https://rickandmortyapi.com/api/episode/${randomNumber}`);
+    return this.http.get<EpisodeInterface>(
+      `https://rickandmortyapi.com/api/episode/${randomNumber}`
+    );
   }
 
+  getAllEpisodes() {
+    return this.http.get('https://rickandmortyapi.com/api/episode/');
+  }
 
+  getEpisodesPage(id) {
+    return this.http.get(`https://rickandmortyapi.com/api/episode/?page=${id}`);
+  }
 }

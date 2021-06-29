@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { EpisodesRoutingModule } from './episodes-routing.module';
 import { MainEpisodesComponent } from './main-episodes/main-episodes.component';
+import { ListEpisodesComponent } from './list-episodes/list-episodes.component';
 
 
 @NgModule({
   declarations: [
-    MainEpisodesComponent
+    MainEpisodesComponent,
+    ListEpisodesComponent
   ],
   imports: [
     CommonModule,
