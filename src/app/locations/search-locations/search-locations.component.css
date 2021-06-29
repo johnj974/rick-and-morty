@@ -7,7 +7,6 @@ p {
   border-radius: 10px;
   margin: 20px 10px;
   min-height: 300px;
-  cursor: pointer;
 }
 
 .pink {
@@ -50,4 +49,18 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.location-number {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 400%;
+  color: hsl(226, 75%, 47%);
+
+  /* color: hsl(190, 90%, 50%); */
+  font-weight: bolder;
 }

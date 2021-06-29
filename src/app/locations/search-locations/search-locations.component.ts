@@ -28,13 +28,6 @@ export class SearchLocationsComponent implements OnInit {
     });
   }
 
-  selectSingleLocation(location, id) {
-    console.log(location);
-    console.log(id);
-    const locationName = location.replace(/ /g, '');
-    this.router.navigate([locationName, id], { relativeTo: this.route });
-  }
-
   nextPage(id: number) {
     const pageNumber = id + 1;
     this.locationService.getLocationPage(pageNumber).subscribe((data: any) => {
