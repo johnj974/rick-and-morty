@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { CharacterInterface } from 'src/app/shared/interfaces/character';
 import { EpisodeInterface } from 'src/app/shared/interfaces/episode';
+import { CharacterService } from 'src/app/shared/services/character.service';
 import { EpisodesService } from 'src/app/shared/services/episodes.service';
 
 @Component({
@@ -12,10 +14,12 @@ export class SingleEpisodeComponent implements OnInit {
   //.
   episodeId: number;
   episode: EpisodeInterface;
+  retrievedCharacterArray: CharacterInterface[] = [];
 
   constructor(
     private route: ActivatedRoute,
-    private episodesService: EpisodesService
+    private episodesService: EpisodesService,
+    private characterService: CharacterService
   ) {}
 
   ngOnInit(): void {
@@ -28,6 +32,25 @@ export class SingleEpisodeComponent implements OnInit {
       .subscribe((data: EpisodeInterface) => {
         console.log(data);
         this.episode = data;
+        this.retrieveCharacters(this.episode);
+      });
+  }
+
+  retrieveCharacters(episode) {
+    const characterArray = this.episode.characters;
+    const searchArray = [];
+    for (let address of characterArray) {
+      let url = address;
+      let lastInstance = url.lastIndexOf('/');
+      let number = url.slice(lastInstance + 1);
+      searchArray.push(number);
+    }
+    //console.log(searchArray);
+    this.characterService
+      .getMultipleCharacters(searchArray)
+      .subscribe((data: any) => {
+        this.retrievedCharacterArray = data;
+        console.log(this.retrievedCharacterArray);
       });
   }
 }

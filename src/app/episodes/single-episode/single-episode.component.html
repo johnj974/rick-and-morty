@@ -1,4 +1,4 @@
-<section class="py-5" id="episodes">
+<section class="py-5">
   <div class="container">
     <div class="row episode-box">
       <div class="col-md-4 episode-number">
@@ -14,6 +14,35 @@
           <h5>{{ episode.episode }}</h5>
           <p>Characters Involved</p>
           <h5>{{ episode.characters.length }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row py-4">
+      <div class="col-md-6" *ngFor="let character of retrievedCharacterArray">
+        <div class="row py-4 character-box">
+          <div class="col-md-4">
+            <div class="image-box">
+              <img
+                src="{{ character.image }}"
+                alt="{{ character.name }}"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div>
+              <p>Name</p>
+              <h4>{{ character.name }}</h4>
+              <p>Status</p>
+              <h5>{{ character.status }}</h5>
+              <p>Species</p>
+              <h5>{{ character.species }} - {{ character.gender }}</h5>
+            </div>
+          </div>
         </div>
       </div>
     </div>
