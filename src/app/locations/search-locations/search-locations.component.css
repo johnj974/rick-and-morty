@@ -35,12 +35,6 @@ img {
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-  .container {
-    border-radius: 0;
-  }
-}
-
 #residents {
   display: contents;
 }
@@ -63,4 +57,16 @@ h1 {
 
   /* color: hsl(190, 90%, 50%); */
   font-weight: bolder;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    border-radius: 0;
+  }
+  #pages {
+    flex-direction: column;
+  }
+  /* button {
+    margin-top: 10px;
+  } */
 }

@@ -10,6 +10,7 @@ import { EpisodesService } from 'src/app/shared/services/episodes.service';
 })
 export class ListEpisodesComponent implements OnInit {
   //.
+  numberArray: string[] = ['one', 'two', 'three'];
   episodesArray: EpisodeInterface[] = [];
   constructor(
     private episodesService: EpisodesService,
@@ -28,5 +29,12 @@ export class ListEpisodesComponent implements OnInit {
     const episodeId = id + 1;
     console.log(id + 1);
     this.router.navigate([episodeName, episodeId], { relativeTo: this.route });
+  }
+
+  nextEpisodePage(id: number) {
+    const pageId = id + 1;
+    this.episodesService.getEpisodesPage(pageId).subscribe((episodes: any) => {
+      this.episodesArray = episodes.results;
+    });
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+
 import { LocationInterface } from 'src/app/shared/interfaces/location';
-import { CharacterService } from 'src/app/shared/services/character.service';
+
 import { LocationService } from 'src/app/shared/services/location.service';
 
 @Component({
@@ -15,12 +15,7 @@ export class SearchLocationsComponent implements OnInit {
   locationArray: LocationInterface[] = [];
   numberArray: string[] = ['one', 'two', 'three', 'four', 'five', 'six'];
 
-  constructor(
-    private locationService: LocationService,
-    private characterService: CharacterService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  constructor(private locationService: LocationService) {}
 
   ngOnInit(): void {
     this.locationService.getLocations().subscribe((data: any) => {

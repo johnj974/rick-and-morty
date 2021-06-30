@@ -1,3 +1,16 @@
+<div class="container">
+  <div class="row pt-4">
+    <div class="col" id="pages">
+      <button
+        class="btn btn-success"
+        (click)="nextEpisodePage(id)"
+        *ngFor="let number of numberArray; let id = index"
+      >
+        page {{ number }}
+      </button>
+    </div>
+  </div>
+</div>
 <div class="container py-4">
   <div class="row">
     <div
@@ -25,3 +38,17 @@
     </div>
   </div>
 </div>
+
+<!-- <div class="container">
+  <div class="row pt-4">
+    <div class="col" id="pages">
+      <button
+        class="btn btn-success"
+        (click)="nextEpisodePage(id)"
+        *ngFor="let number of numberArray; let id = index"
+      >
+        page {{ number }}
+      </button>
+    </div>
+  </div>
+</div> -->
