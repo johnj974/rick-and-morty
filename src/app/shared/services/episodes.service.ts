@@ -17,14 +17,20 @@ export class EpisodesService {
   }
 
   getAllEpisodes() {
-    return this.http.get('https://rickandmortyapi.com/api/episode/');
+    return this.http.get<EpisodeInterface>(
+      'https://rickandmortyapi.com/api/episode/'
+    );
   }
 
   getEpisodesPage(id) {
-    return this.http.get(`https://rickandmortyapi.com/api/episode/?page=${id}`);
+    return this.http.get<EpisodeInterface>(
+      `https://rickandmortyapi.com/api/episode/?page=${id}`
+    );
   }
 
   getEpisode(id) {
-    return this.http.get(`https://rickandmortyapi.com/api/episode/${id}`);
+    return this.http.get<EpisodeInterface>(
+      `https://rickandmortyapi.com/api/episode/${id}`
+    );
   }
 }

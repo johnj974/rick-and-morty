@@ -10,11 +10,11 @@ p {
 }
 
 .pink {
-  background-color: hsl(300, 71%, 66%);
+  background-color: hsl(300, 56%, 49%);
 }
 
 .orange {
-  background-color: hsl(39, 100%, 50%);
+  background-color: hsl(39, 100%, 44%);
 }
 
 .col-lg-4 {
@@ -39,11 +39,11 @@ img {
   display: contents;
 }
 
-#pages {
+/* #pages {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
+} */
 
 .location-number {
   justify-content: center;
@@ -57,6 +57,10 @@ h1 {
 
   /* color: hsl(190, 90%, 50%); */
   font-weight: bolder;
+}
+
+.btn {
+  background-color: hsl(90, 100%, 50%);
 }
 
 @media only screen and (max-width: 600px) {

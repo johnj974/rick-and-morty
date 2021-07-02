@@ -12,6 +12,7 @@ body {
 }
 #characters {
   background-color: hsl(330, 67%, 52%);
+  /* background-color: hsl(328, 100%, 54%); */
 }
 #locations {
   background-color: hsl(162, 73%, 46%);
@@ -19,5 +20,8 @@ body {
 #episodes {
   background-color: hsl(25, 75%, 47%);
 }
-
-
+#pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

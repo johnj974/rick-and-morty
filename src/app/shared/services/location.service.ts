@@ -12,11 +12,13 @@ export class LocationService {
   constructor(private http: HttpClient) {}
 
   getLocations() {
-    return this.http.get('https://rickandmortyapi.com/api/location');
+    return this.http.get<LocationInterface>(
+      'https://rickandmortyapi.com/api/location'
+    );
   }
 
   getLocationPage(index: number) {
-    return this.http.get(
+    return this.http.get<LocationInterface>(
       `https://rickandmortyapi.com/api/location?page=${index}`
     );
   }

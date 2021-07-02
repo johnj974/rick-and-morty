@@ -1,9 +1,15 @@
 .episode-box {
-  background-color: hsl(271, 76%, 53%);
+  /* background-color: hsl(271, 76%, 53%); */
+  background-color: hsl(271, 100%, 22%);
   border-radius: 10px;
   margin: 20px 10px;
   min-height: 300px;
   cursor: pointer;
+}
+
+.episode-box:hover {
+  /* background-color: hsl(328, 100%, 54%); */
+  background-color: hsl(271, 76%, 53%);
 }
 
 .episode-details {
@@ -26,4 +32,8 @@ h1 {
 
   color: hsl(190, 90%, 50%);
   font-weight: bolder;
+}
+
+.btn {
+  background-color: hsl(90, 100%, 50%);
 }
