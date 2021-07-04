@@ -60,7 +60,9 @@ h1 {
 }
 
 .btn {
-  background-color: hsl(90, 100%, 50%);
+  /* background-color: hsl(90, 100%, 33%); */
+  background-color: none;
+  color: hsl(0, 0%, 100%);
 }
 
 @media only screen and (max-width: 600px) {

@@ -35,5 +35,6 @@ h1 {
 }
 
 .btn {
-  background-color: hsl(90, 100%, 50%);
+  background-color: none;
+  color: white;
 }

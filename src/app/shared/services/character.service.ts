@@ -11,6 +11,12 @@ export class CharacterService {
 
   constructor(private http: HttpClient) {}
 
+  getAllCharacters() {
+    return this.http.get<{ info: {}; results: CharacterInterface[] }>(
+      `${this.url}/character`
+    );
+  }
+
   getRandomCharacter() {
     const id = Math.floor(Math.random() * 670) + 1;
     return this.http.get<CharacterInterface>(`${this.url}/character/${id}`);
