@@ -1,0 +1,49 @@
+.episode-box {
+  background-color: hsl(271, 76%, 53%);
+  border-radius: 10px;
+  margin: 20px 10px;
+  min-height: 300px;
+  cursor: pointer;
+}
+
+.episode-details {
+  padding: 20px;
+}
+
+p {
+  margin: 0;
+}
+
+.episode-number {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 400%;
+  /* color: hsl(25, 75%, 47%); */
+
+  color: hsl(190, 90%, 50%);
+  font-weight: bolder;
+}
+
+/* CHARACTER STYLING */
+
+img {
+  border-radius: 5px;
+}
+
+.image-box {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.character-box {
+  background-color: hsl(328, 100%, 54%);
+  /* background-color: hsl(330, 67%, 52%); */
+  border-radius: 10px;
+  margin: 20px 10px;
+  min-height: 248px;
+}

@@ -1,6 +1,7 @@
 .episode-box {
   /* background-color: hsl(271, 76%, 53%); */
-  background-color: hsl(271, 100%, 22%);
+  /* background-color: hsl(271, 100%, 22%); */
+  background-color: hsl(25, 100%, 50%);
   border-radius: 10px;
   margin: 20px 10px;
   min-height: 300px;
@@ -9,7 +10,8 @@
 
 .episode-box:hover {
   /* background-color: hsl(328, 100%, 54%); */
-  background-color: hsl(271, 76%, 53%);
+  /* background-color: hsl(271, 76%, 53%); */
+  background-color: hsl(25, 100%, 57%);
 }
 
 .episode-details {
