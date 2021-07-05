@@ -1,1 +1,33 @@
-<p>single-character works!</p>
+<section id="characters">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-md-4">
+        <div class="image-box">
+          <img
+            src="{{ character.image }}"
+            alt="{{ character.name }}"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="character-box">
+          <p>Name</p>
+          <h2>{{ character.name }}</h2>
+          <p>Status</p>
+          <h3>{{ character.status }}</h3>
+          <p>Species</p>
+          <h3>{{ character.species }} - {{ character.gender }}</h3>
+          <p>Last Known Location</p>
+          <h3>{{ character.location.name }}</h3>
+          <p>Origin</p>
+          <h3>{{ character.origin.name }}</h3>
+          <p>Appearances</p>
+          <h3>{{ character.episode.length }}</h3>
+          <p>Episode Name</p>
+          <h3 *ngFor="let name of retrievedEpisodeArray">{{ name.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
