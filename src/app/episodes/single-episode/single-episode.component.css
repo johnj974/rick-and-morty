@@ -50,4 +50,5 @@ img {
   border-radius: 10px;
   margin: 20px 10px;
   min-height: 248px;
+  cursor: pointer;
 }

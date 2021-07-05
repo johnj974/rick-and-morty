@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CharacterInterface } from 'src/app/shared/interfaces/character';
 import { EpisodeInterface } from 'src/app/shared/interfaces/episode';
 import { CharacterService } from 'src/app/shared/services/character.service';
@@ -18,7 +18,8 @@ export class SingleCharacterComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private characterService: CharacterService,
-    private episodeService: EpisodesService
+    private episodeService: EpisodesService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -47,5 +48,9 @@ export class SingleCharacterComponent implements OnInit {
       this.retrievedEpisodeArray = data;
       console.log(this.retrievedEpisodeArray);
     });
+  }
+
+  toEpisode(name, id) {
+    this.router.navigate(['episodes', name, id]);
   }
 }

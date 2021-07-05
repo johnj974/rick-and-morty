@@ -25,7 +25,13 @@
           <p>Appearances</p>
           <h3>{{ character.episode.length }}</h3>
           <p>Episode Name</p>
-          <h3 *ngFor="let name of retrievedEpisodeArray">{{ name.name }}</h3>
+          <h3
+            *ngFor="let episode of retrievedEpisodeArray"
+            (click)="toEpisode(episode.name, episode.id)"
+            class="episode-links"
+          >
+            {{ episode.name }}
+          </h3>
         </div>
       </div>
     </div>

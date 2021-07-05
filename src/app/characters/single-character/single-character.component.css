@@ -29,3 +29,9 @@ img {
     border-radius: 0;
   }
 }
+
+.episode-links {
+  color: white;
+  cursor: pointer;
+  background-color: hsl(25, 75%, 47%);
+}
