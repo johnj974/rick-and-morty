@@ -36,19 +36,6 @@ img {
   }
 }
 
-#episode-row {
-  color: white;
-  background-color: hsl(25, 75%, 47%);
-}
-
 .episode-links {
-  cursor: pointer;
-}
-
-.episode-box {
-  background-color: hsl(25, 100%, 57%);
-  border-radius: 10px;
-  margin: 20px 10px;
-  min-height: 300px;
   cursor: pointer;
 }

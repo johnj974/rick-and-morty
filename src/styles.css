@@ -25,3 +25,46 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+
+.episode-box {
+  background-color: hsl(25, 100%, 57%);
+  border-radius: 10px;
+  margin: 20px 10px;
+  min-height: 300px;
+  cursor: pointer;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.image-box {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.character-box {
+  background-color: hsl(330, 82%, 57%);
+  border-radius: 10px;
+  margin: 20px 10px;
+  min-height: 248px;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: none;
+  color: hsl(0, 0%, 100%);
+}
+
+h1 {
+  font-size: 400%;
+  color: hsl(226, 75%, 47%);
+  font-weight: bolder;
+}
+
+.display-number {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

@@ -3,19 +3,16 @@ p {
 }
 
 .location-box {
-  /* background-color: hsl(271, 76%, 53%); */
   border-radius: 10px;
   margin: 20px 10px;
   min-height: 300px;
 }
 
 .pink {
-  /* background-color: hsl(300, 56%, 49%); */
   background-color: hsl(162, 71%, 49%);
 }
 
 .orange {
-  /* background-color: hsl(39, 100%, 44%); */
   background-color: hsl(162, 71%, 49%);
 }
 
@@ -41,32 +38,6 @@ img {
   display: contents;
 }
 
-/* #pages {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-} */
-
-.location-number {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-
-h1 {
-  font-size: 400%;
-  color: hsl(226, 75%, 47%);
-
-  /* color: hsl(190, 90%, 50%); */
-  font-weight: bolder;
-}
-
-.btn {
-  /* background-color: hsl(90, 100%, 33%); */
-  background-color: none;
-  color: hsl(0, 0%, 100%);
-}
-
 @media only screen and (max-width: 600px) {
   .container {
     border-radius: 0;
@@ -74,7 +45,4 @@ h1 {
   #pages {
     flex-direction: column;
   }
-  /* button {
-    margin-top: 10px;
-  } */
 }

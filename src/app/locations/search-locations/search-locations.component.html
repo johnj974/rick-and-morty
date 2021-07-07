@@ -19,12 +19,12 @@
       *ngFor="let location of locationArray; let id = index"
     >
       <div class="row py-4 location-box {{ id % 2 === 0 ? 'orange' : 'pink' }}">
-        <div class="col-md-4 location-number">
+        <div class="col-md-4 display-number">
           <h1>{{ location.id }}</h1>
         </div>
 
         <div class="col-md-8">
-          <div class="character-box">
+          <div>
             <p>Location</p>
             <h4>{{ location.name }}</h4>
             <p>Type</p>
