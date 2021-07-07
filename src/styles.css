@@ -7,12 +7,10 @@ body {
 }
 
 #home {
-  /* background-color: hsl(0, 100%, 50%); */
   background-color: hsl(190, 90%, 50%);
 }
 #characters {
   background-color: hsl(330, 67%, 52%);
-  /* background-color: hsl(328, 100%, 54%); */
 }
 #locations {
   background-color: hsl(162, 73%, 46%);
@@ -20,6 +18,7 @@ body {
 #episodes {
   background-color: hsl(25, 75%, 47%);
 }
+
 #pages {
   display: flex;
   flex-direction: row;
@@ -32,6 +31,10 @@ body {
   margin: 20px 10px;
   min-height: 300px;
   cursor: pointer;
+}
+
+.episode-details {
+  padding: 20px;
 }
 
 img {
@@ -67,4 +70,22 @@ h1 {
   justify-content: center;
   display: flex;
   align-items: center;
+}
+
+.container {
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    border-radius: 0;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.col-lg-4 {
+  padding: 0;
 }

@@ -1,7 +1,3 @@
-p {
-  margin: 0;
-}
-
 .location-box {
   border-radius: 10px;
   margin: 20px 10px;
@@ -16,32 +12,7 @@ p {
   background-color: hsl(162, 71%, 49%);
 }
 
-.col-lg-4 {
-  padding: 0;
-}
-
-.image-box {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-
-img {
-  border-radius: 5px;
-}
-
-.container {
-  border-radius: 10px;
-}
-
-#residents {
-  display: contents;
-}
-
 @media only screen and (max-width: 600px) {
-  .container {
-    border-radius: 0;
-  }
   #pages {
     flex-direction: column;
   }

@@ -1,11 +1,3 @@
 .episode-box:hover {
   background-color: hsl(25, 100%, 50%);
 }
-
-.episode-details {
-  padding: 20px;
-}
-
-p {
-  margin: 0;
-}
