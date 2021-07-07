@@ -20,8 +20,14 @@ img {
   border-radius: 5px;
 }
 
-.container {
+.character-container {
   border-radius: 10px;
+  background-color: hsl(330, 82%, 57%);
+}
+
+.episode-container {
+  border-radius: 10px;
+  background-color: hsl(25, 75%, 47%);
 }
 
 @media only screen and (max-width: 600px) {
@@ -30,8 +36,19 @@ img {
   }
 }
 
-.episode-links {
+#episode-row {
   color: white;
-  cursor: pointer;
   background-color: hsl(25, 75%, 47%);
+}
+
+.episode-links {
+  cursor: pointer;
+}
+
+.episode-box {
+  background-color: hsl(25, 100%, 57%);
+  border-radius: 10px;
+  margin: 20px 10px;
+  min-height: 300px;
+  cursor: pointer;
 }

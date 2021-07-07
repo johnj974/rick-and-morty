@@ -7,7 +7,7 @@ section {
   border-radius: 10px;
   margin: 20px 10px;
   min-height: 300px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .episode-details {

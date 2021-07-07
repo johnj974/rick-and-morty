@@ -41,9 +41,11 @@ img {
 }
 
 .character-box {
-  background-color: hsl(328, 100%, 54%);
+  /* background-color: hsl(328, 100%, 54%); */
+  background-color: hsl(330, 82%, 57%);
   /* background-color: hsl(330, 67%, 52%); */
   border-radius: 10px;
   margin: 20px 10px;
   min-height: 248px;
+  cursor: pointer;
 }
