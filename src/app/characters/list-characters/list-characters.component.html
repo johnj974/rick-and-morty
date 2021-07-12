@@ -1,6 +1,7 @@
 <section>
   <div class="container">
     <div class="row py-4">
+      <button (click)="previousPage()">previous</button>
       <button (click)="nextPage()">next</button>
       <div
         class="col-md-6"
@@ -8,7 +9,7 @@
       >
         <div
           class="row py-4 character-box"
-          (click)="toCharacterInfo(character.name, id)"
+          (click)="toCharacterInfo(character.name, character.id)"
         >
           <div class="col-md-4">
             <div class="image-box">

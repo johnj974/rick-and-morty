@@ -1,3 +1,7 @@
 section {
   background-color: hsl(25, 75%, 47%);
 }
+
+.episode-box {
+  cursor: default;
+}

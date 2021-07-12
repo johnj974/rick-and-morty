@@ -34,6 +34,13 @@
           <h3>{{ character.episode.length }}</h3>
           <p>No. - Episode Name</p>
           <h3
+            *ngIf="singleEpisode"
+            (click)="toEpisode(singleEpisode.name, singleEpisode.id)"
+            class="episode-links"
+          >
+            {{ singleEpisode.id }} - {{ singleEpisode.name }}
+          </h3>
+          <h3
             *ngFor="let episode of retrievedEpisodeArray"
             (click)="toEpisode(episode.name, episode.id)"
             class="episode-links"

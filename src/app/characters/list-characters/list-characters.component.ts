@@ -27,7 +27,7 @@ export class ListCharactersComponent implements OnInit {
   }
 
   toCharacterInfo(character: string, id: number) {
-    const characterId = id + 1;
+    const characterId = id;
     const characterName = character.replace(/ /g, '');
     this.router.navigate([characterName, characterId], {
       relativeTo: this.route,
@@ -37,6 +37,18 @@ export class ListCharactersComponent implements OnInit {
   nextPage() {
     this.characterService
       .toNextPage(this.info.next)
+      .subscribe((characterData) => {
+        this.retrievedCharacterArray = characterData.results;
+        this.info = characterData.info;
+      });
+  }
+
+  previousPage() {
+    if (this.info.prev === null) {
+      return;
+    }
+    this.characterService
+      .toPreviousPage(this.info.prev)
       .subscribe((characterData) => {
         this.retrievedCharacterArray = characterData.results;
         this.info = characterData.info;

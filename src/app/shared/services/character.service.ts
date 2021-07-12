@@ -30,10 +30,12 @@ export class CharacterService {
     return this.http.get<CharacterInterface>(`${this.url}/character/${id}`);
   }
 
-  toNextPage(address){
-    return this.http.get<{ info: {}; results: CharacterInterface[] }>(
-      address
-    )
+  toNextPage(address) {
+    return this.http.get<{ info: {}; results: CharacterInterface[] }>(address);
+  }
+
+  toPreviousPage(address) {
+    return this.http.get<{ info: {}; results: CharacterInterface[] }>(address);
   }
 }
 

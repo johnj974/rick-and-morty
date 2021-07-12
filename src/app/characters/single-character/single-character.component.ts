@@ -15,6 +15,8 @@ export class SingleCharacterComponent implements OnInit {
 
   character: CharacterInterface;
   retrievedEpisodeArray = [];
+  singleEpisode;
+
   constructor(
     private route: ActivatedRoute,
     private characterService: CharacterService,
@@ -44,9 +46,14 @@ export class SingleCharacterComponent implements OnInit {
       searchArray.push(number);
     }
     //console.log(searchArray);
+    if (searchArray.length === 1) {
+      this.episodeService.getEpisode(searchArray).subscribe((data) => {
+        this.singleEpisode = data;
+      });
+    }
     this.episodeService.getEpisode(searchArray).subscribe((data: any) => {
       this.retrievedEpisodeArray = data;
-      console.log(this.retrievedEpisodeArray);
+      //console.log(this.retrievedEpisodeArray);
     });
   }
 
