@@ -10,6 +10,7 @@ import { CharacterService } from 'src/app/shared/services/character.service';
 export class ListCharactersComponent implements OnInit {
   //.
   retrievedCharacterArray = [];
+  info;
 
   constructor(
     private characterService: CharacterService,
@@ -20,6 +21,8 @@ export class ListCharactersComponent implements OnInit {
   ngOnInit(): void {
     this.characterService.getAllCharacters().subscribe((data) => {
       this.retrievedCharacterArray = data.results;
+      this.info = data.info;
+      console.log(this.info.next);
     });
   }
 
@@ -29,5 +32,14 @@ export class ListCharactersComponent implements OnInit {
     this.router.navigate([characterName, characterId], {
       relativeTo: this.route,
     });
+  }
+
+  nextPage() {
+    this.characterService
+      .toNextPage(this.info.next)
+      .subscribe((characterData) => {
+        this.retrievedCharacterArray = characterData.results;
+        this.info = characterData.info;
+      });
   }
 }

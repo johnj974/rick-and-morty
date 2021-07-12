@@ -29,6 +29,12 @@ export class CharacterService {
   getSpecificCharacter(id: number) {
     return this.http.get<CharacterInterface>(`${this.url}/character/${id}`);
   }
+
+  toNextPage(address){
+    return this.http.get<{ info: {}; results: CharacterInterface[] }>(
+      address
+    )
+  }
 }
 
 //https://rickandmortyapi.com/api/character/?name=rick&status=alive
