@@ -1,0 +1,16 @@
+h2.arrow {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 80px;
+}
+h2.right-arrow {
+  /* display: inline-block; */
+  cursor: pointer;
+  font-size: 80px;
+  float: right;
+}
+
+h2.arrow:hover,
+h2.right-arrow:hover {
+  color: hsl(190, 90%, 50%);
+}

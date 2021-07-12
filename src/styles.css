@@ -55,6 +55,10 @@ img {
   cursor: pointer;
 }
 
+.character-box:hover {
+  background-color: hsl(330, 84%, 47%);
+}
+
 .btn {
   background-color: none;
   color: hsl(0, 0%, 100%);

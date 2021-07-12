@@ -21,13 +21,13 @@ export class ListEpisodesComponent implements OnInit {
   ngOnInit(): void {
     this.episodesService.getAllEpisodes().subscribe((episodes: any) => {
       this.episodesArray = episodes.results;
-      console.log(this.episodesArray);
+      //console.log(this.episodesArray);
     });
   }
 
   toEpisode(episodeName, id) {
     const episodeId = id + 1;
-    console.log(id + 1);
+    //console.log(id + 1);
     this.router.navigate([episodeName, episodeId], { relativeTo: this.route });
   }
 

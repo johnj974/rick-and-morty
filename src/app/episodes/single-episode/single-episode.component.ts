@@ -25,13 +25,13 @@ export class SingleEpisodeComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
-      console.log(data.id);
+      //console.log(data.id);
       this.episodeId = data.id;
     });
     this.episodesService
       .getEpisode(this.episodeId)
       .subscribe((data: EpisodeInterface) => {
-        console.log(data);
+        //console.log(data);
         this.episode = data;
         this.retrieveCharacters(this.episode);
       });
@@ -51,7 +51,7 @@ export class SingleEpisodeComponent implements OnInit {
       .getMultipleCharacters(searchArray)
       .subscribe((data: any) => {
         this.retrievedCharacterArray = data;
-        console.log(this.retrievedCharacterArray);
+        //console.log(this.retrievedCharacterArray);
       });
   }
 

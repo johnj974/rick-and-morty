@@ -30,7 +30,7 @@ export class SingleCharacterComponent implements OnInit {
         .getSpecificCharacter(data.id)
         .subscribe((characterData) => {
           this.character = characterData;
-          console.log(this.character);
+          //console.log(this.character);
           this.retrieveEpisode();
         });
     });
@@ -50,11 +50,12 @@ export class SingleCharacterComponent implements OnInit {
       this.episodeService.getEpisode(searchArray).subscribe((data) => {
         this.singleEpisode = data;
       });
+    } else {
+      this.episodeService.getEpisode(searchArray).subscribe((data: any) => {
+        this.retrievedEpisodeArray = data;
+        //console.log(this.retrievedEpisodeArray);
+      });
     }
-    this.episodeService.getEpisode(searchArray).subscribe((data: any) => {
-      this.retrievedEpisodeArray = data;
-      //console.log(this.retrievedEpisodeArray);
-    });
   }
 
   toEpisode(name, id) {

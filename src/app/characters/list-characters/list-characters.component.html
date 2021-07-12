@@ -1,8 +1,10 @@
 <section>
   <div class="container">
     <div class="row py-4">
-      <button (click)="previousPage()">previous</button>
-      <button (click)="nextPage()">next</button>
+      <div>
+        <h2 class="arrow" (click)="previousPage()">&#11013;</h2>
+        <h2 class="right-arrow" (click)="nextPage()">&#10145;</h2>
+      </div>
       <div
         class="col-md-6"
         *ngFor="let character of retrievedCharacterArray; let id = index"
