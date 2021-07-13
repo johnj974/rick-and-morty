@@ -10,7 +10,14 @@ h2.right-arrow {
   float: right;
 }
 
-h2.arrow:hover,
+/* h2.arrow:hover,
 h2.right-arrow:hover {
+  color: hsl(190, 90%, 50%);
+} */
+
+.even:hover {
+  color: hsl(162, 73%, 46%);
+}
+.odd:hover {
   color: hsl(190, 90%, 50%);
 }

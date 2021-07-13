@@ -11,6 +11,7 @@ export class ListCharactersComponent implements OnInit {
   //.
   retrievedCharacterArray = [];
   info;
+  evenDate = new Date().getDate();
 
   constructor(
     private characterService: CharacterService,

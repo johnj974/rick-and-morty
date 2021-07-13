@@ -16,7 +16,7 @@
     <div
       class="col-md-6"
       *ngFor="let episode of episodesArray; let id = index"
-      (click)="toEpisode(episode.name, id)"
+      (click)="toEpisode(episode.name, episode.id)"
     >
       <div class="row episode-box">
         <div class="col-md-4 display-number">

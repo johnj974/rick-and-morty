@@ -29,10 +29,4 @@ export class SearchLocationsComponent implements OnInit {
       this.locationArray = data.results;
     });
   }
-
-  // GENERATES A RANDOM CHARACTER IMAGE FOR USE IN THE IMG ELEMENT
-  // randomCharacter() {
-  //   const randomImageId = Math.floor(Math.random() * 671) + 1;
-  //   return `https://rickandmortyapi.com/api/character/avatar/${randomImageId}.jpeg`;
-  // }
 }

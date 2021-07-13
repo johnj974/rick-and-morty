@@ -26,9 +26,9 @@ export class ListEpisodesComponent implements OnInit {
   }
 
   toEpisode(episodeName, id) {
-    const episodeId = id + 1;
-    //console.log(id + 1);
-    this.router.navigate([episodeName, episodeId], { relativeTo: this.route });
+    const episodeId = id;
+    const cleanName = episodeName.replace(/ /g, '');
+    this.router.navigate([cleanName, episodeId], { relativeTo: this.route });
   }
 
   nextEpisodePage(id: number) {
