@@ -13,7 +13,26 @@ import { EpisodesService } from 'src/app/shared/services/episodes.service';
 export class SingleCharacterComponent implements OnInit {
   //.
 
-  character: CharacterInterface;
+  character: CharacterInterface = {
+    id: 6,
+    name: 'Abadango Cluster Princess',
+    status: 'Alive',
+    species: 'Alien',
+    type: '',
+    gender: 'Female',
+    origin: {
+      name: 'Abadango',
+      url: 'https://rickandmortyapi.com/api/location/2',
+    },
+    location: {
+      name: 'Abadango',
+      url: 'https://rickandmortyapi.com/api/location/2',
+    },
+    image: 'https://rickandmortyapi.com/api/character/avatar/6.jpeg',
+    episode: ['https://'],
+    url: 'https://rickandmortyapi.com/api/character/6',
+    created: '2017-11-04T19:50:28.250Z',
+  };
   retrievedEpisodeArray = [];
   singleEpisode;
 
@@ -30,7 +49,7 @@ export class SingleCharacterComponent implements OnInit {
         .getSpecificCharacter(data.id)
         .subscribe((characterData) => {
           this.character = characterData;
-          //console.log(this.character);
+          console.log(this.character);
           this.retrieveEpisode();
         });
     });
@@ -59,6 +78,7 @@ export class SingleCharacterComponent implements OnInit {
   }
 
   toEpisode(name, id) {
-    this.router.navigate(['episodes', name, id]);
+    const episodeName = name.replace(/ /g, '');
+    this.router.navigate(['episodes', episodeName, id]);
   }
 }

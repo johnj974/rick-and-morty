@@ -11,9 +11,17 @@ import { EpisodesService } from 'src/app/shared/services/episodes.service';
   styleUrls: ['./single-episode.component.css'],
 })
 export class SingleEpisodeComponent implements OnInit {
-  //.
   episodeId: number;
-  episode: EpisodeInterface;
+
+  episode: EpisodeInterface = {
+    id: 20,
+    name: "Look Who's Purging Now",
+    air_date: 'September 27, 2015',
+    episode: 'S02E09',
+    characters: ['https://rickandmortyapi.com/api/character/1'],
+    url: 'https://rickandmortyapi.com/api/episode/20',
+    created: '2017-11-10T12:56:35.772Z',
+  };
   retrievedCharacterArray: CharacterInterface[] = [];
 
   constructor(
@@ -31,7 +39,7 @@ export class SingleEpisodeComponent implements OnInit {
     this.episodesService
       .getEpisode(this.episodeId)
       .subscribe((data: EpisodeInterface) => {
-        //console.log(data);
+        console.log(data);
         this.episode = data;
         this.retrieveCharacters(this.episode);
       });

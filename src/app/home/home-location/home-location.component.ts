@@ -33,7 +33,7 @@ export class HomeLocationComponent implements OnInit {
     });
     this.locationService.getRandomLocation().subscribe((retrievedLocation) => {
       this.location = retrievedLocation;
-      console.log(this.location);
+      //console.log(this.location);
     });
   }
 }

@@ -32,7 +32,7 @@ export class HomeEpisodesComponent implements OnInit {
   ngOnInit(): void {
     this.episodeService.getRandomEpisode().subscribe((returnedEpisode) => {
       this.singleEpisode = returnedEpisode;
-      console.log(this.singleEpisode);
+      //console.log(this.singleEpisode);
     });
 
     this.chracterService
