@@ -49,7 +49,7 @@ export class SingleCharacterComponent implements OnInit {
         .getSpecificCharacter(data.id)
         .subscribe((characterData) => {
           this.character = characterData;
-          console.log(this.character);
+          //console.log(this.character);
           this.retrieveEpisode();
         });
     });

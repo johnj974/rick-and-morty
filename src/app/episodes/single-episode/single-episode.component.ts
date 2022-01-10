@@ -39,7 +39,7 @@ export class SingleEpisodeComponent implements OnInit {
     this.episodesService
       .getEpisode(this.episodeId)
       .subscribe((data: EpisodeInterface) => {
-        console.log(data);
+        //console.log(data);
         this.episode = data;
         this.retrieveCharacters(this.episode);
       });

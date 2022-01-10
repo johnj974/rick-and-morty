@@ -23,7 +23,7 @@ export class ListCharactersComponent implements OnInit {
     this.characterService.getAllCharacters().subscribe((data) => {
       this.retrievedCharacterArray = data.results;
       this.info = data.info;
-      console.log(this.info.next);
+      //console.log(this.info.next);
     });
   }
 
